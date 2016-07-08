@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/location_rootView">
+    <ImageView
+        android:id="@+id/location_image"
+        android:layout_width="@dimen/location_list_image"
+        android:layout_height="@dimen/location_list_image"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/ennios"/>
+    <LinearLayout
+        android:layout_toRightOf="@id/location_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/location_text_margin"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/location_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Ennios"/>
+        <TextView
+            android:id="@+id/location_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/star"/>
+        <TextView
+            android:id="@+id/location_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="High quality Italian cuisine."/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_alignBottom="@id/location_image"
+        android:layout_toRightOf="@id/location_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/location_text_margin">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Reviews"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Map"/>
+    </LinearLayout>
+
+</RelativeLayout>
