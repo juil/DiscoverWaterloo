@@ -42,16 +42,8 @@ public class Location {
         return reviewUrl;
     }
 
-    public String getReviewUrl_formatted() {
-        return "&lt;a href=\"" + reviewUrl +"\">Reviews&lt;/a>";
-    }
-
     public String getMapUrl() {
         return mapUrl;
-    }
-
-    public String getMapUrl_formatted() {
-        return "&lt;a href=\"" + mapUrl +"\">Map&lt;/a>";
     }
 
     public int getImageResourceId() {
