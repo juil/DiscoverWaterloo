@@ -12,6 +12,8 @@ public class Location {
     private String description;
     /** Link to location in review site. */
     private String reviewUrl;
+    /** Link to Google map. */
+    private String mapUrl;
     /** Drawable id of representative image. */
     private int imageResourceId;
 
@@ -41,7 +43,15 @@ public class Location {
     }
 
     public String getReviewUrl_formatted() {
-        return "&lt;a href=\"" + reviewUrl +"\">" + name + "&lt;/a>";
+        return "&lt;a href=\"" + reviewUrl +"\">Reviews&lt;/a>";
+    }
+
+    public String getMapUrl() {
+        return mapUrl;
+    }
+
+    public String getMapUrl_formatted() {
+        return "&lt;a href=\"" + mapUrl +"\">Map&lt;/a>";
     }
 
     public int getImageResourceId() {
