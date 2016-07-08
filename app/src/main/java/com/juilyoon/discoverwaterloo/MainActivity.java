@@ -16,7 +16,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.ListView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -113,9 +116,18 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
+            // List of locations to display.
+            ArrayList<Location> locationList = new ArrayList<>();
+            locationList.add(new Location("Ennio's", 5, "A very nice and romantic Italian restaurant.",
+                                            "https://www.tripadvisor.ca/Restaurant_Review-g181736-d704123-Reviews-Ennio_s_Pasta_House-Waterloo_Region_of_Waterloo_Ontario.html",
+                                            "https://goo.gl/maps/NGg2KPGkhoB2",
+                                            R.drawable.ennios));
+
+            LocationArrayAdapter locationAdapter = new LocationArrayAdapter(getActivity(), locationList);
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-            TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
+            ListView listView = (ListView) rootView.findViewById(R.id.location_list);
+            listView.setAdapter(locationAdapter);
+//            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
             return rootView;
         }
     }

@@ -17,11 +17,12 @@ public class Location {
     /** Drawable id of representative image. */
     private int imageResourceId;
 
-    public Location(String name, int rating, String description, String reviewUrl, int imageResourceId) {
+    public Location(String name, int rating, String description, String reviewUrl, String mapUrl, int imageResourceId) {
         this.name = name;
         this.rating = rating;
         this.description = description;
         this.reviewUrl = reviewUrl;
+        this.mapUrl = mapUrl;
         this.imageResourceId = imageResourceId;
     }
 
