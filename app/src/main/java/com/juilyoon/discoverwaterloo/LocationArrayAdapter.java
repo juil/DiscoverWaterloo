@@ -2,6 +2,10 @@ package com.juilyoon.discoverwaterloo;
 
 import android.app.Activity;
 import android.content.Context;
+import android.text.Html;
+import android.text.Spannable;
+import android.text.Spanned;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,8 +37,8 @@ public class LocationArrayAdapter extends ArrayAdapter<Location> {
         final Location currentLocation = getItem(position);
 
         // Set location image
-        int imageResourceId = currentLocation.getImageResourceId();
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.location_image);
+        imageView.setImageResource(currentLocation.getImageResourceId());
 
         // Set location name
         TextView locationName = (TextView) listItemView.findViewById(R.id.location_name);
@@ -43,7 +47,8 @@ public class LocationArrayAdapter extends ArrayAdapter<Location> {
         // Set location rating
         TextView locationRating = (TextView) listItemView.findViewById(R.id.location_rating);
         // Display number of stars according to rating
-        locationRating.setText(generateStarRating("&#9733;", currentLocation.getRating()));
+        locationRating.setText(generateStarRating(parent.getResources().getString(R.string.star),
+                                                currentLocation.getRating()));
 
         // Set location description
         TextView locationDescription = (TextView) listItemView.findViewById(R.id.location_description);
@@ -51,20 +56,22 @@ public class LocationArrayAdapter extends ArrayAdapter<Location> {
 
         // Set location reviews link
         TextView locationReviews = (TextView) listItemView.findViewById(R.id.location_reviews);
-        locationReviews.setText(generateLink(currentLocation.getReviewUrl(), parent.getResources().getString(R.string.reviews)));
+        locationReviews.setText(generateLink(currentLocation.getReviewUrl(), "Reviews"));
 
+        // Set map link
         TextView locationMap = (TextView) listItemView.findViewById(R.id.location_map);
-        locationMap.setText(generateLink(currentLocation.getMapUrl(), parent.getResources().getString(R.string.map)));
+        locationMap.setText(generateLink(currentLocation.getMapUrl(), "Map"));
 
-        // Return the whole list item layout (containing 2 TextViews) to be shown in the ListView
+        // Return the whole list item layout to be shown in the ListView
         return listItemView;
     }
 
     private String generateStarRating(String with, int count) {
-        return new String(new char[count]).replace("\0", with);
+        return new String(new char[count]).replace("\0", " " + with);
     }
 
-    private String generateLink(String url, String text) {
-        return "&lt;a href=\"" + url +"\">" + text + "&lt;/a>";
+    private Spanned generateLink(String url, String text) {
+        String link = "<a href='" + url +"'>" + text + "</a>";
+        return Html.fromHtml(link);
     }
 }

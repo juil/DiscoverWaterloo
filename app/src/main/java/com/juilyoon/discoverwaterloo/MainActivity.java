@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
                                  Bundle savedInstanceState) {
             // List of locations to display.
             ArrayList<Location> locationList = new ArrayList<>();
-            locationList.add(new Location("Ennio's", 5, "A very nice and romantic Italian restaurant.",
+            locationList.add(new Location("Ennio's", 4, "A very nice and romantic Italian restaurant.",
                                             "https://www.tripadvisor.ca/Restaurant_Review-g181736-d704123-Reviews-Ennio_s_Pasta_House-Waterloo_Region_of_Waterloo_Ontario.html",
                                             "https://goo.gl/maps/NGg2KPGkhoB2",
                                             R.drawable.ennios));
@@ -138,6 +138,8 @@ public class MainActivity extends AppCompatActivity {
      */
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
+        private String[] title = new String[]{"Restaurants", "Fun Stuff"};
+
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
         }
@@ -151,21 +153,12 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            // Show 3 total pages.
-            return 3;
+            return title.length;
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
-            switch (position) {
-                case 0:
-                    return "SECTION 1";
-                case 1:
-                    return "SECTION 2";
-                case 2:
-                    return "SECTION 3";
-            }
-            return null;
+            return title[position];
         }
     }
 }
