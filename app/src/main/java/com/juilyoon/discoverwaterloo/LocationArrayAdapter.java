@@ -5,6 +5,7 @@ import android.content.Context;
 import android.text.Html;
 import android.text.Spannable;
 import android.text.Spanned;
+import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -36,6 +37,9 @@ public class LocationArrayAdapter extends ArrayAdapter<Location> {
         // Get the {@link Word} object located at this position in the list
         final Location currentLocation = getItem(position);
 
+        // All item click events to pass through despite links calling LinkMovementMethod
+        ((ViewGroup)listItemView).setDescendantFocusability(ViewGroup.FOCUS_BLOCK_DESCENDANTS);
+
         // Set location image
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.location_image);
         imageView.setImageResource(currentLocation.getImageResourceId());
@@ -56,10 +60,12 @@ public class LocationArrayAdapter extends ArrayAdapter<Location> {
 
         // Set location reviews link
         TextView locationReviews = (TextView) listItemView.findViewById(R.id.location_reviews);
+        locationReviews.setMovementMethod(LinkMovementMethod.getInstance());
         locationReviews.setText(generateLink(currentLocation.getReviewUrl(), "Reviews"));
 
         // Set map link
         TextView locationMap = (TextView) listItemView.findViewById(R.id.location_map);
+        locationMap.setMovementMethod(LinkMovementMethod.getInstance());
         locationMap.setText(generateLink(currentLocation.getMapUrl(), "Map"));
 
         // Return the whole list item layout to be shown in the ListView
