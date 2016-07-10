@@ -112,16 +112,22 @@ public class MainActivity extends AppCompatActivity {
                                  Bundle savedInstanceState) {
             // List of locations to display.
             ArrayList<Location> locationList = new ArrayList<>();
-            locationList.add(new Location("Ennio's", 4, "A very nice and romantic Italian restaurant.",
-                                            "https://www.tripadvisor.ca/Restaurant_Review-g181736-d704123-Reviews-Ennio_s_Pasta_House-Waterloo_Region_of_Waterloo_Ontario.html",
-                                            "https://goo.gl/maps/NGg2KPGkhoB2",
-                                            R.drawable.ennios));
+            switch (getArguments().getInt(ARG_SECTION_NUMBER)) {
+                case 1:
+                    locationList.add(new Location("Ennio's", 4, "A very nice and romantic Italian restaurant.",
+                            "https://www.tripadvisor.ca/Restaurant_Review-g181736-d704123-Reviews-Ennio_s_Pasta_House-Waterloo_Region_of_Waterloo_Ontario.html",
+                            "https://goo.gl/maps/NGg2KPGkhoB2",
+                            R.drawable.ennios));
+                    locationList.add(new Location("Bao Sandwich Bar", 5, "",
+                            "https://www.tripadvisor.ca/Restaurant_Review-g181736-d9729136-Reviews-Bao_Sandwich_Bar-Waterloo_Region_of_Waterloo_Ontario.html",
+                            "https://goo.gl/maps/DasC8zLv11K2",
+                            R.drawable.bao));
+            }
 
             LocationArrayAdapter locationAdapter = new LocationArrayAdapter(getActivity(), locationList);
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
             ListView listView = (ListView) rootView.findViewById(R.id.location_list);
             listView.setAdapter(locationAdapter);
-//            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
             return rootView;
         }
     }

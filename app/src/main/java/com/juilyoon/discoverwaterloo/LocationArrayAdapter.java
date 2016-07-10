@@ -73,7 +73,7 @@ public class LocationArrayAdapter extends ArrayAdapter<Location> {
     }
 
     private String generateStarRating(String with, int count) {
-        return new String(new char[count]).replace("\0", " " + with);
+        return new String(new char[count]).replace("\0", with + " ");
     }
 
     private Spanned generateLink(String url, String text) {
