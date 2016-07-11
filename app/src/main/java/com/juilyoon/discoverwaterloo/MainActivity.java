@@ -93,7 +93,66 @@ public class MainActivity extends AppCompatActivity {
          */
         private static final String ARG_SECTION_NUMBER = "section_number";
 
+        /** Lists of attractions */
+        private ArrayList<Location> restaurantList = new ArrayList<>();
+        private ArrayList<Location> activityList = new ArrayList<>();
+        private ArrayList<Location> attractionList = new ArrayList<>();
+        private ArrayList<Location> shoppingList = new ArrayList<>();
+
         public PlaceholderFragment() {
+            // Add restaurants
+            restaurantList.add(new Location("Ennio's", 4, "A very nice and romantic Italian restaurant.",
+                    "https://www.tripadvisor.ca/Restaurant_Review-g181736-d704123-Reviews-Ennio_s_Pasta_House-Waterloo_Region_of_Waterloo_Ontario.html",
+                    "https://goo.gl/maps/NGg2KPGkhoB2",
+                    R.drawable.ennios));
+            restaurantList.add(new Location("Bao Sandwich Bar", 5, "Excellent Vietnamese (bahn mi) and Taiwanese (gua bao) sandwiches.",
+                    "https://www.tripadvisor.ca/Restaurant_Review-g181736-d9729136-Reviews-Bao_Sandwich_Bar-Waterloo_Region_of_Waterloo_Ontario.html",
+                    "https://goo.gl/maps/DasC8zLv11K2",
+                    R.drawable.bao));
+            restaurantList.add(new Location("Mozy's Shawarma", 4, "Large portion and delicious shawarma sandwiches.",
+                    "https://www.tripadvisor.ca/Restaurant_Review-g181736-d4123939-Reviews-Mozy_s_Shawarma-Waterloo_Region_of_Waterloo_Ontario.html",
+                    "https://goo.gl/maps/KmwVJpjNWip",
+                    R.drawable.mozys));
+            restaurantList.add(new Location("Mory's Pub", 4, "Chicken wing pub opne late and wing specials.",
+                    "https://www.tripadvisor.ca/Restaurant_Review-g181736-d803941-Reviews-Morty_s-Waterloo_Region_of_Waterloo_Ontario.html",
+                    "https://goo.gl/maps/yjYtT5jyPnk",
+                    R.drawable.mortys));
+
+            // Add activities
+            Log.v("onCreateView", "Activities list loaded.");
+            activityList.add(new Location("The Clever Archer", 5, "Paintball, but with bows and arrows!",
+                    "http://www.thecleverarcher.com/",
+                    "https://goo.gl/maps/hgivSfQQG9S2",
+                    R.drawable.clever_archer));
+            activityList.add(new Location("Elora Quarry", 4, "Water, sandy beach, and cliff jumping.",
+                    "https://www.tripadvisor.ca/Attraction_Review-g679248-d6650716-Reviews-Elora_Quarry_Conservation_Area-Elora_Ontario.html",
+                    "https://goo.gl/maps/wr5hNQdYf9L2",
+                    R.drawable.elora_quarry));
+
+            // Add attractions
+            Log.v("onCreateView", "Attractions list loaded.");
+            attractionList.add(new Location("Oktoberfest", 4, "Canada's largest German celebration.",
+                    "https://www.facebook.com/kitchenerwaterloooktoberfest/",
+                    "http://www.oktoberfest.ca/",
+                    R.drawable.oktoberfest));
+            attractionList.add(new Location("Elmira Maple Syrup Festival", 5,
+                    "A huge festival celebrating maple syrup.",
+                    "https://www.facebook.com/ElmiraMapleSyrupFestival/",
+                    "http://www.elmiramaplesyrup.com/",
+                    R.drawable.elmira));
+
+            // Add shopping locations
+            Log.v("onCreateView", "Shopping list loaded.");
+            shoppingList.add(new Location("St. Jacobs Farmer's Market", 5,
+                    "Canada's largest year-round farmer's market.",
+                    "https://www.tripadvisor.ca/Attraction_Review-g499298-d2402442-Reviews-St_Jacobs_Farmers_Market-St_Jacobs_Region_of_Waterloo_Ontario.html",
+                    "https://goo.gl/maps/R3DuCxGMV9s",
+                    R.drawable.stjacobs));
+            shoppingList.add(new Location("Nike Factory Store", 5,
+                    "Nike shoes and clothing at the lowest prices you'll find anywhere.",
+                    "https://www.google.ca/search?q=Nike+Factory+Store,+4326+King+St+E,+Kitchener,+ON+N2P+2G5&ludocid=8493271779053122037#lrd=0x882b8a42e3496bbb:0x75de29af0b4fb1f5,1",
+                    "https://goo.gl/maps/WBxPoKa5To22",
+                    R.drawable.nike));
         }
 
         /**
@@ -101,6 +160,7 @@ public class MainActivity extends AppCompatActivity {
          * number.
          */
         public static PlaceholderFragment newInstance(int sectionNumber) {
+
             PlaceholderFragment fragment = new PlaceholderFragment();
             Bundle args = new Bundle();
             args.putInt(ARG_SECTION_NUMBER, sectionNumber);
@@ -114,62 +174,23 @@ public class MainActivity extends AppCompatActivity {
             // List of locations to display.
             // NOTE: Update String[] title in SectionsPagerAdapter
             ArrayList<Location> locationList = new ArrayList<>();
+            // #TODO: Fix runtime error
             switch (getArguments().getInt(ARG_SECTION_NUMBER)) {
                 case 1:
                     // Restaurants
-                    Log.v("onCreateView", "Restaurant list loaded.");
-                    locationList.add(new Location("Ennio's", 4, "A very nice and romantic Italian restaurant.",
-                            "https://www.tripadvisor.ca/Restaurant_Review-g181736-d704123-Reviews-Ennio_s_Pasta_House-Waterloo_Region_of_Waterloo_Ontario.html",
-                            "https://goo.gl/maps/NGg2KPGkhoB2",
-                            R.drawable.ennios));
-                    locationList.add(new Location("Bao Sandwich Bar", 5, "Excellent Vietnamese (bahn mi) and Taiwanese (gua bao) sandwiches.",
-                            "https://www.tripadvisor.ca/Restaurant_Review-g181736-d9729136-Reviews-Bao_Sandwich_Bar-Waterloo_Region_of_Waterloo_Ontario.html",
-                            "https://goo.gl/maps/DasC8zLv11K2",
-                            R.drawable.bao));
-                    locationList.add(new Location("Mozy's Shawarma", 4, "Large portion and delicious shawarma sandwiches.",
-                            "https://www.tripadvisor.ca/Restaurant_Review-g181736-d4123939-Reviews-Mozy_s_Shawarma-Waterloo_Region_of_Waterloo_Ontario.html",
-                            "https://goo.gl/maps/KmwVJpjNWip",
-                            R.drawable.mozys));
-                    locationList.add(new Location("Mory's Pub", 4, "Chicken wing pub opne late and wing specials.",
-                            "https://www.tripadvisor.ca/Restaurant_Review-g181736-d803941-Reviews-Morty_s-Waterloo_Region_of_Waterloo_Ontario.html",
-                            "https://goo.gl/maps/yjYtT5jyPnk",
-                            R.drawable.mortys));
+                    locationList = restaurantList;
                     break;
                 case 2:
                     // Activities
-                    locationList.add(new Location("The Clever Archer", 5, "Paintball, but with bows and arrows!",
-                            "http://www.thecleverarcher.com/",
-                            "https://goo.gl/maps/hgivSfQQG9S2",
-                            R.drawable.clever_archer));
-                    locationList.add(new Location("Elora Quarry", 4, "Water, sandy beach, and cliff jumping.",
-                            "https://www.tripadvisor.ca/Attraction_Review-g679248-d6650716-Reviews-Elora_Quarry_Conservation_Area-Elora_Ontario.html",
-                            "https://goo.gl/maps/wr5hNQdYf9L2",
-                            R.drawable.elora_quarry));
+                    locationList = activityList;
                     break;
                 case 3:
                     // Attractions
-                    locationList.add(new Location("Oktoberfest", 4, "Canada's largest German celebration.",
-                            "https://www.facebook.com/kitchenerwaterloooktoberfest/",
-                            "http://www.oktoberfest.ca/",
-                            R.drawable.oktoberfest));
-                    locationList.add(new Location("Elmira Maple Syrup Festival", 5,
-                            "A huge festival celebrating maple syrup.",
-                            "https://www.facebook.com/ElmiraMapleSyrupFestival/",
-                            "http://www.elmiramaplesyrup.com/",
-                            R.drawable.elmira));
+                    locationList = attractionList;
                     break;
                 case 4:
                     // Shopping
-                    locationList.add(new Location("St. Jacobs Farmer's Market", 5,
-                            "Canada's largest year-round farmer's market.",
-                            "https://www.tripadvisor.ca/Attraction_Review-g499298-d2402442-Reviews-St_Jacobs_Farmers_Market-St_Jacobs_Region_of_Waterloo_Ontario.html",
-                            "https://goo.gl/maps/R3DuCxGMV9s",
-                            R.drawable.stjacobs));
-                    locationList.add(new Location("Nike Factory Store", 5,
-                            "Nike shoes and clothing at the lowest prices you'll find anywhere.",
-                            "https://www.google.ca/search?q=Nike+Factory+Store,+4326+King+St+E,+Kitchener,+ON+N2P+2G5&ludocid=8493271779053122037#lrd=0x882b8a42e3496bbb:0x75de29af0b4fb1f5,1",
-                            "https://goo.gl/maps/WBxPoKa5To22",
-                            R.drawable.nike));
+                    locationList = shoppingList;
                     break;
             }
 
