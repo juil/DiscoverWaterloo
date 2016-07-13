@@ -5,4 +5,28 @@
     <string name="star">★</string>
     <string name="reviews">Reviews</string>
     <string name="map">Map</string>
+    <!-- Restaurant locations-->
+    <string name="ennios_name">Ennio\'s</string>
+    <string name="ennios_desc">A very nice and romantic Italian restaurant.</string>
+    <string name="bao_name">Bao Sandwich Bar</string>
+    <string name="bao_desc">Excellent Vietnamese (bahn mi) and Taiwanese (gua bao) sandwiches.</string>
+    <string name="mozys_name">Mozy\'s Shawarma</string>
+    <string name="mozys_desc">Large portion and delicious shawarma sandwiches.</string>
+    <string name="mortys_name">Morty\'s Pub</string>
+    <string name="mortys_desc">Chicken wing pub open late and weekly wing specials.</string>
+    <!-- Activity locations-->
+    <string name="cleverArcher_name">The Clever Archer</string>
+    <string name="cleverArcher_desc">Paintball, but with bows and arrows!</string>
+    <string name="eloraQuarry_name">Elora Quarry</string>
+    <string name="eloraQuarry_dsec">Water, sandy beach, and cliff jumping.</string>
+    <!-- Attraction locations -->
+    <string name="oktoberfest_name">Oktoberfest</string>
+    <string name="oktoberfest_desc">Canada\'s largest German celebration.</string>
+    <string name="elmiraMaple_name">Elmira Maple Syrup Festival</string>
+    <string name="elmiraMaple_desc">A huge festival celebrating maple syrup.</string>
+    <!-- Shopping Locations -->
+    <string name="stJacobs_name">St. Jacob\'s Farmer\'s Market</string>
+    <string name="stJacobs_desc">Canada\'s largest year-round farmer\'s market.</string>
+    <string name="nikeFactory_name">Nike Factory Store</string>
+    <string name="nikeFactory_desc">Nike shoes and clothing at the lowest prices you\'ll find anywhere.</string>
 </resources>
