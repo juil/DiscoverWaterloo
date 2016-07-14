@@ -5,9 +5,16 @@
     <string name="star">★</string>
     <string name="reviews">Reviews</string>
     <string name="map">Map</string>
+    <!-- Category Names -->
+    <string name="category_restaurants">Restaurants</string>
+    <string name="category_activities">Activities</string>
+    <string name="category_attractions">Attractions</string>
+    <string name="category_shopping">Shopping</string>
     <!-- Restaurant locations-->
     <string name="ennios_name">Ennio\'s</string>
     <string name="ennios_desc">A very nice and romantic Italian restaurant.</string>
+    <string name="ennios_reviewUrl"></string>
+    <string name="ennios_mapUrl"></string>
     <string name="bao_name">Bao Sandwich Bar</string>
     <string name="bao_desc">Excellent Vietnamese (bahn mi) and Taiwanese (gua bao) sandwiches.</string>
     <string name="mozys_name">Mozy\'s Shawarma</string>

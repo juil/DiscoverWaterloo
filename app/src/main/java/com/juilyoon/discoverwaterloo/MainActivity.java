@@ -211,7 +211,8 @@ public class MainActivity extends AppCompatActivity {
      */
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
-        private String[] title = new String[]{"Restaurants", "Activities", "Attractions", "Shopping"};
+        private String[] title = new String[]{getString(R.string.category_restaurants), getString(R.string.category_activities),
+            getString(R.string.category_attractions), getString(R.string.category_shopping)};
 
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
