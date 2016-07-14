@@ -1,12 +1,9 @@
 package com.juilyoon.discoverwaterloo;
 
 import android.app.Activity;
-import android.content.Context;
 import android.text.Html;
-import android.text.Spannable;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +12,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by juil on 16-07-08.
