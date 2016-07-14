@@ -142,20 +142,16 @@ public class MainActivity extends AppCompatActivity {
                         // Add restaurants
                         Log.v("PlaceholderFragment", "Restaurants generated.");
                         restaurantList.add(new Location(getString(R.string.ennios_name), 4, getString(R.string.ennios_desc),
-                                "https://www.tripadvisor.ca/Restaurant_Review-g181736-d704123-Reviews-Ennio_s_Pasta_House-Waterloo_Region_of_Waterloo_Ontario.html",
-                                "https://goo.gl/maps/NGg2KPGkhoB2",
+                                getString(R.string.ennios_reviewUrl), getString(R.string.ennios_mapUrl),
                                 R.drawable.ennios));
                         restaurantList.add(new Location(getString(R.string.bao_name), 5, getString(R.string.bao_desc),
-                                "https://www.tripadvisor.ca/Restaurant_Review-g181736-d9729136-Reviews-Bao_Sandwich_Bar-Waterloo_Region_of_Waterloo_Ontario.html",
-                                "https://goo.gl/maps/DasC8zLv11K2",
+                                getString(R.string.bao_reviewUrl), getString(R.string.bao_mapUrl),
                                 R.drawable.bao));
                         restaurantList.add(new Location(getString(R.string.mozys_name), 4, getString(R.string.mozys_desc),
-                                "https://www.tripadvisor.ca/Restaurant_Review-g181736-d4123939-Reviews-Mozy_s_Shawarma-Waterloo_Region_of_Waterloo_Ontario.html",
-                                "https://goo.gl/maps/KmwVJpjNWip",
+                                getString(R.string.mozys_reviewUrl), getString(R.string.mozys_mapUrl),
                                 R.drawable.mozys));
                         restaurantList.add(new Location(getString(R.string.mortys_name), 4, getString(R.string.mortys_desc),
-                                "https://www.tripadvisor.ca/Restaurant_Review-g181736-d803941-Reviews-Morty_s-Waterloo_Region_of_Waterloo_Ontario.html",
-                                "https://goo.gl/maps/yjYtT5jyPnk",
+                                getString(R.string.mozys_reviewUrl), getString(R.string.mozys_mapUrl),
                                 R.drawable.mortys));
                     }
                     break;
@@ -164,12 +160,10 @@ public class MainActivity extends AppCompatActivity {
                         // Add activities
                         Log.v("PlaceholderFragment", "Activities generated.");
                         activityList.add(new Location(getString(R.string.cleverArcher_name), 4, getString(R.string.cleverArcher_desc),
-                                "http://www.thecleverarcher.com/",
-                                "https://goo.gl/maps/hgivSfQQG9S2",
+                                getString(R.string.cleverArcher_reviewUrl), getString(R.string.cleverArcher_mapUrl),
                                 R.drawable.clever_archer));
                         activityList.add(new Location(getString(R.string.eloraQuarry_name), 4, getString(R.string.eloraQuarry_dsec),
-                                "https://www.tripadvisor.ca/Attraction_Review-g679248-d6650716-Reviews-Elora_Quarry_Conservation_Area-Elora_Ontario.html",
-                                "https://goo.gl/maps/wr5hNQdYf9L2",
+                                getString(R.string.eloraQuarry_reviewUrl), getString(R.string.eloraQuarry_mapUrl),
                                 R.drawable.elora_quarry));
                     }
                     break;
@@ -178,12 +172,10 @@ public class MainActivity extends AppCompatActivity {
                         // Add attractions
                         Log.v("PlaceholderFragment", "Attractions generated.");
                         attractionList.add(new Location(getString(R.string.oktoberfest_name), 4, getString(R.string.oktoberfest_desc),
-                                "https://www.facebook.com/kitchenerwaterloooktoberfest/",
-                                "http://www.oktoberfest.ca/",
+                                getString(R.string.oktoberfest_reviewUrl), getString(R.string.oktoberfest_mapUrl),
                                 R.drawable.oktoberfest));
                         attractionList.add(new Location(getString(R.string.elmiraMaple_name), 4, getString(R.string.elmiraMaple_desc),
-                                "https://www.facebook.com/ElmiraMapleSyrupFestival/",
-                                "http://www.elmiramaplesyrup.com/",
+                                getString(R.string.elmiraMaple_reviewUrl), getString(R.string.elmiraMaple_mapUrl),
                                 R.drawable.elmira));
                     }
                     break;
@@ -192,12 +184,10 @@ public class MainActivity extends AppCompatActivity {
                         // Add shopping locations
                         Log.v("PlaceholderFragment", "Shopping generated.");
                         shoppingList.add(new Location(getString(R.string.stJacobs_name), 5, getString(R.string.stJacobs_desc),
-                                "https://www.tripadvisor.ca/Attraction_Review-g499298-d2402442-Reviews-St_Jacobs_Farmers_Market-St_Jacobs_Region_of_Waterloo_Ontario.html",
-                                "https://goo.gl/maps/R3DuCxGMV9s",
+                                getString(R.string.stJacobs_reviewUrl), getString(R.string.stJacobs_mapUrl),
                                 R.drawable.stjacobs));
                         shoppingList.add(new Location(getString(R.string.nikeFactory_name), 5, getString(R.string.nikeFactory_desc),
-                                "https://www.google.ca/search?q=Nike+Factory+Store,+4326+King+St+E,+Kitchener,+ON+N2P+2G5&ludocid=8493271779053122037#lrd=0x882b8a42e3496bbb:0x75de29af0b4fb1f5,1",
-                                "https://goo.gl/maps/WBxPoKa5To22",
+                                getString(R.string.nikeFactory_reviewUrl), getString(R.string.nikeFactory_mapUrl),
                                 R.drawable.nike));
                     }
                     break;

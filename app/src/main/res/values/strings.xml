@@ -13,27 +13,45 @@
     <!-- Restaurant locations-->
     <string name="ennios_name">Ennio\'s</string>
     <string name="ennios_desc">A very nice and romantic Italian restaurant.</string>
-    <string name="ennios_reviewUrl"></string>
-    <string name="ennios_mapUrl"></string>
+    <string name="ennios_reviewUrl">https://www.tripadvisor.ca/Restaurant_Review-g181736-d704123-Reviews-Ennio_s_Pasta_House-Waterloo_Region_of_Waterloo_Ontario.html</string>
+    <string name="ennios_mapUrl">https://goo.gl/maps/NGg2KPGkhoB2</string>
     <string name="bao_name">Bao Sandwich Bar</string>
     <string name="bao_desc">Excellent Vietnamese (bahn mi) and Taiwanese (gua bao) sandwiches.</string>
+    <string name="bao_reviewUrl">https://www.tripadvisor.ca/Restaurant_Review-g181736-d9729136-Reviews-Bao_Sandwich_Bar-Waterloo_Region_of_Waterloo_Ontario.html</string>
+    <string name="bao_mapUrl">https://goo.gl/maps/DasC8zLv11K2</string>
     <string name="mozys_name">Mozy\'s Shawarma</string>
     <string name="mozys_desc">Large portion and delicious shawarma sandwiches.</string>
+    <string name="mozys_reviewUrl">https://www.tripadvisor.ca/Restaurant_Review-g181736-d4123939-Reviews-Mozy_s_Shawarma-Waterloo_Region_of_Waterloo_Ontario.html</string>
+    <string name="mozys_mapUrl">https://goo.gl/maps/KmwVJpjNWip</string>
     <string name="mortys_name">Morty\'s Pub</string>
     <string name="mortys_desc">Chicken wing pub open late and weekly wing specials.</string>
+    <string name="mortys_reviewUrl">https://www.tripadvisor.ca/Restaurant_Review-g181736-d803941-Reviews-Morty_s-Waterloo_Region_of_Waterloo_Ontario.html</string>
+    <string name="mortys_mapUrl">https://goo.gl/maps/yjYtT5jyPnk</string>
     <!-- Activity locations-->
     <string name="cleverArcher_name">The Clever Archer</string>
     <string name="cleverArcher_desc">Paintball, but with bows and arrows!</string>
+    <string name="cleverArcher_reviewUrl">http://www.thecleverarcher.com/</string>
+    <string name="cleverArcher_mapUrl">https://goo.gl/maps/hgivSfQQG9S2</string>
     <string name="eloraQuarry_name">Elora Quarry</string>
     <string name="eloraQuarry_dsec">Water, sandy beach, and cliff jumping.</string>
+    <string name="eloraQuarry_reviewUrl">https://www.tripadvisor.ca/Attraction_Review-g679248-d6650716-Reviews-Elora_Quarry_Conservation_Area-Elora_Ontario.html</string>
+    <string name="eloraQuarry_mapUrl">https://goo.gl/maps/wr5hNQdYf9L2</string>
     <!-- Attraction locations -->
     <string name="oktoberfest_name">Oktoberfest</string>
     <string name="oktoberfest_desc">Canada\'s largest German celebration.</string>
+    <string name="oktoberfest_reviewUrl">https://www.facebook.com/kitchenerwaterloooktoberfest/</string>
+    <string name="oktoberfest_mapUrl">http://www.oktoberfest.ca/</string>
     <string name="elmiraMaple_name">Elmira Maple Syrup Festival</string>
     <string name="elmiraMaple_desc">A huge festival celebrating maple syrup.</string>
+    <string name="elmiraMaple_reviewUrl">https://www.facebook.com/ElmiraMapleSyrupFestival/</string>
+    <string name="elmiraMaple_mapUrl">http://www.elmiramaplesyrup.com/</string>
     <!-- Shopping Locations -->
     <string name="stJacobs_name">St. Jacob\'s Farmer\'s Market</string>
     <string name="stJacobs_desc">Canada\'s largest year-round farmer\'s market.</string>
+    <string name="stJacobs_reviewUrl">https://www.tripadvisor.ca/Attraction_Review-g499298-d2402442-Reviews-St_Jacobs_Farmers_Market-St_Jacobs_Region_of_Waterloo_Ontario.html</string>
+    <string name="stJacobs_mapUrl">https://goo.gl/maps/R3DuCxGMV9s</string>
     <string name="nikeFactory_name">Nike Factory Store</string>
     <string name="nikeFactory_desc">Nike shoes and clothing at the lowest prices you\'ll find anywhere.</string>
+    <string name="nikeFactory_reviewUrl">https://www.google.ca/search?q=Nike+Factory+Store,+4326+King+St+E,+Kitchener,+ON+N2P+2G5&amp;ludocid=8493271779053122037#lrd=0x882b8a42e3496bbb:0x75de29af0b4fb1f5,1</string>
+    <string name="nikeFactory_mapUrl">https://goo.gl/maps/WBxPoKa5To22</string>
 </resources>
